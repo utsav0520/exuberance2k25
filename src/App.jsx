@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import {
   Home,
   EventPage,
-  Schedule
+  Schedule,
+  Rangoli
 } from './pages/index'
  
 function App() {
@@ -12,8 +13,9 @@ function App() {
     <> 
       <Routes>
         <Route path='/' element={<Home />}  />
-        <Route path='/event' element={<EventPage />}  />
+        <Route path='/events' element={<EventPage />}  />
         <Route path='/schedule' element={<Schedule />}  />
+        <Route path='/rangoli' element={<Rangoli />}  />
       </Routes>
       <Fotter />
     </>

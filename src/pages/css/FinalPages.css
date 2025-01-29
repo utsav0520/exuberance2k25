@@ -1,0 +1,131 @@
+/* Root Variables for Colors */
+:root {
+    --primary-color: white;        /* Main Text Color */
+    --secondary-color: #0482ff;    /* Secondary (e.g., Borders, Highlights) */
+    --tertiary-color: #95b7ff;     /* Registration Text Color */
+    --hover-effect: linear-gradient(45deg, #ff6600, #ffcc00, #ff0066);
+}
+
+/* Main container */
+.team-below {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: var(--primary-color);
+    padding: 20px;
+}
+
+/* Poster + Details Wrapper */
+.poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Fixed poster image size */
+.poster-imag {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* Event Details Container */
+.logo-hunt-details {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Headers with gradient color */
+.logo3 {
+    font-size: 24px;
+    font-weight: bold;
+    background: var(--hover-effect);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Unordered lists */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Register Button */
+.register-button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+    background: var(--hover-effect);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-button:hover {
+    background: black;
+    color: var(--tertiary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+/* LAYOUT FOR BIGGER SCREENS - Poster Above, Text Below */
+@media (min-width: 768px) {
+    .poster {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .poster-imag {
+        max-width: 400px;
+    }
+
+    .register-button {
+        align-self: center;
+    }
+
+    .logo-hunt-details {
+        text-align: center;
+    }
+}
+
+/* MOBILE - Poster on top, text below */
+@media (max-width: 768px) {
+    .poster {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .poster-imag {
+        max-width: 100%;
+    }
+
+    .logo-hunt-details {
+        text-align: center;
+    }
+
+    .register-button {
+        align-self: center;
+    }
+}
