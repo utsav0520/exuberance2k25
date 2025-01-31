@@ -74,8 +74,8 @@ body {
 
 /* Individual Team Card */
 .team-card {
-    background: rgba(255, 255, 255, 0.1); /* 10% White Background */
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.4); /* 10% White Background */
+    border-radius: 10%;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -93,11 +93,11 @@ body {
 
 /* Team Image */
 .team-image {
-    width: 320px;
-    height: 320px;
+    width: 280px;
+    height: 280px;
     border-radius: 10%;
     object-fit: cover;
-    border: 3px solid var(--secondary-color);
+    border: 5px solid var(--extra-border-color);
 }
 
 /* Team Title */
@@ -105,6 +105,7 @@ body {
     margin: 10px 0 0;
     font-size: 1.5rem;
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 /* Responsive Design */
@@ -120,8 +121,8 @@ body {
     }
 
     .team-card {
-        width: 95%;
-        max-width: 320px;
+        width: 85%;
+        max-width: 290px;
         margin: auto;
     }
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/EventPage.css'
 import '../css/FinalPages.css'
 import { Link } from 'react-router-dom'
 import {

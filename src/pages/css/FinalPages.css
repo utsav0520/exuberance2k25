@@ -1,78 +1,43 @@
-/* Root Variables for Colors */
 :root {
-    --primary-color: white;        /* Main Text Color */
-    --secondary-color: #0482ff;    /* Secondary (e.g., Borders, Highlights) */
-    --tertiary-color: #95b7ff;     /* Registration Text Color */
+    --primary-color: white;        
+    --secondary-color: #0482ff;    
+    --tertiary-color: #95b7ff;     
     --hover-effect: linear-gradient(45deg, #ff6600, #ffcc00, #ff0066);
 }
 
-/* Main container */
 .team-below {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    color: var(--primary-color);
     padding: 20px;
 }
 
-/* Poster + Details Wrapper */
 .poster {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     max-width: 900px;
     width: 100%;
     padding: 20px;
 }
 
-/* Fixed poster image size */
 .poster-imag {
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
     border: 3px solid var(--secondary-color);
-    margin-bottom: 15px;
 }
 
-/* Event Details Container */
-.logo-hunt-details {
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    text-align: left;
-}
-
-/* Headers with gradient color */
-.logo3 {
-    font-size: 24px;
-    font-weight: bold;
-    background: var(--hover-effect);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
-}
-
-/* Paragraphs */
-p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* Unordered lists */
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-/* Register Button */
 .register-button {
+    display: block;
+    width: max-content;
     margin-top: 15px;
+    margin-left: 30%;
     padding: 12px 20px;
     font-size: 18px;
     font-weight: bold;
@@ -90,28 +55,41 @@ ul li {
     border: 2px solid var(--secondary-color);
 }
 
-/* LAYOUT FOR BIGGER SCREENS - Poster Above, Text Below */
-@media (min-width: 768px) {
-    .poster {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .poster-imag {
-        max-width: 400px;
-    }
-
-    .register-button {
-        align-self: center;
-    }
-
-    .logo-hunt-details {
-        text-align: center;
-    }
+.logo-hunt-details {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: left;
 }
 
-/* MOBILE - Poster on top, text below */
+.logo3 {
+    font-size: 24px;
+    font-weight: bold;
+    background: var(--hover-effect);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
 @media (max-width: 768px) {
+    .team-below {
+        width: 80%;
+    }
+
     .poster {
         flex-direction: column;
         align-items: center;
@@ -122,10 +100,14 @@ ul li {
     }
 
     .logo-hunt-details {
-        text-align: center;
+        text-align: start;
+        width: 95%;
     }
 
     .register-button {
         align-self: center;
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
     }
 }

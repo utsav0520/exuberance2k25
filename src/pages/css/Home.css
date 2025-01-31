@@ -35,6 +35,7 @@ body {
     width: 120px;
     height: 120px;
   }
+
 }
 
 .inside-ex-text {
@@ -112,6 +113,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .inside-ex-text {
+  font-size: 3rem; 
+  }
   .menu {
     flex-direction: column;
     align-items: center;
